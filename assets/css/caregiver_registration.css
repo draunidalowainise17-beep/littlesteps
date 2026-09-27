@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --brand-orange: #f8b450;
+    --brand-pink: #e8758e;
+    --text-dark: #222222;
+    --text-light: #666666;
+    --bg-white: #ffffff;
+    --shadow-soft: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+}
+
+/* Auth Pages (Login, Register) Wrapper */
+.auth-page-wrapper {
+    background: var(--brand-pink) url('../media/doodle.png') no-repeat center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 40px;
+}
+
+/* The Main Form Card */
+.auth-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-top: 5px solid var(--brand-orange);
+}
+
+.standard-form h2, 
+.standard-form h3 {
+    text-align: center;
+    color: var(--brand-orange);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-control,
+.standard-form input,
+.standard-form select,
+.standard-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.standard-form input:focus {
+    border-color: var(--brand-orange);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(248, 180, 80, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+    display: block;
+    width: 100%;
+    background: var(--brand-orange);
+    color: var(--bg-white);
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: var(--brand-pink);
+    transform: translateY(-2px);
+}
+
+/* Alerts */
+.alert, .message {
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.alert-danger {
+    background: #fdf3f4;
+    color: #d9534f;
+    border-left: 4px solid #d9534f;
+}
+
+.alert-success {
+    background: #f0fff0;
+    color: #28a745;
+    border-left: 4px solid #28a745;
+}
+
+@media (max-width: 600px) {
+    .auth-card { padding: 25px; }
+}

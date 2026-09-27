@@ -1,0 +1,169 @@
+:root {
+    --orange: #f9ba60;
+    --pink: #e9768f;
+    --black: #1d1c1c;
+    --white: #fff;
+    --light-color: #666;
+    --light-orange: #fdd7ac;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--white);
+    color: var(--black);
+    display: flex;
+    flex-direction: row; /* Ensures elements are side by side */
+    flex-wrap: nowrap;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--white);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-color);
+    z-index: 1000;
+}
+
+h1 {
+    margin: 0;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.table-container {
+    margin-top: 60px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 120px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    padding: 5px;  /* Adjust padding to reduce row height */
+    line-height: 1.2;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 2px solid var(--pink);
+    color: var(--black);
+}
+
+td {
+    border-bottom: 1px solid var(--light-color);
+    background-color: var(--white);
+}
+
+tr:hover td {
+    background-color: var(--light-orange);
+}
+
+img {
+    border-radius: 50%;
+}
+
+button {
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--light-orange);
+}
+
+/* Sidebar Layout */
+.main-content {
+    margin-left: 250px; /* Adjust this if the sidebar width changes */
+    padding: 20px;
+    flex: 1;
+}
+
+nav {
+    width: 250px; /* Set the width of the navigation */
+    background-color: var(--orange);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999; /* Ensure the nav stays on top of other content */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile View */
+@media screen and (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove margin for mobile view */
+    }
+
+    nav {
+        width: 100%;
+        position: relative;
+        padding: 10px 15px;
+    }
+
+    table {
+        margin-top: 20px;
+    }
+
+    button {
+        width: 100%; /* Ensure buttons are responsive on mobile */
+    }
+}
+
+/* Mobile Table Styling */
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        background-color: var(--orange);
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        color: var(--black);
+    }
+
+    body {
+        flex-direction: column;
+    }
+}

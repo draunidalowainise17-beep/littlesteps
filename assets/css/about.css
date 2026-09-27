@@ -1,0 +1,124 @@
+/* About Us Page Styles */
+.about-wrapper {
+    background-color: var(--pink);
+    padding: 120px 5% 50px 5%;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+/* Flex Layout */
+.about-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.about-visuals {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-visuals img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-text-content {
+    flex: 1 1 45%;
+    color: var(--white);
+}
+
+.about-text-content img {
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.about-text-content h3 {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.about-text-content p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+/* Contact Grid */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.contact-card {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-bottom: 4px solid var(--orange);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: var(--pink);
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.contact-card a, 
+.contact-card address {
+    color: var(--pink);
+    font-size: 1.3rem;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.6;
+    display: block;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text-content img {
+        margin: 0 auto 1.5rem auto;
+    }
+}

@@ -1,0 +1,92 @@
+:root {
+    --brand-orange: #f8b450;
+    --brand-pink: #e8758e;
+    --text-dark: #222222;
+    --text-light: #666666;
+    --bg-white: #ffffff;
+    --shadow-soft: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+body {
+    background-color: var(--brand-orange);
+}
+
+.profile-container {
+    padding: 120px 5% 60px;
+    min-height: 100vh;
+}
+
+.page-title {
+    color: var(--bg-white);
+    font-size: 2.8rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.dossier-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Blocks */
+.dossier-block {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.highlight-block {
+    border-left: 6px solid var(--brand-pink);
+}
+
+.block-title {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+/* Grids & Cards */
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.data-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ececec;
+}
+
+.primary-card {
+    background: #fff0f3;
+    border-color: var(--brand-pink);
+    grid-column: 1 / -1; /* Make it span full width */
+}
+
+.data-card h4 {
+    margin-top: 0;
+    color: var(--brand-pink);
+    font-size: 1.2rem;
+}
+
+.data-card p {
+    margin: 8px 0;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.data-card strong {
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .dossier-block { padding: 20px; }
+}

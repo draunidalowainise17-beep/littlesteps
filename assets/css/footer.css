@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensures content pushes footer to the bottom */
+main, .container, .wrapper {
+    flex: 1 0 auto;
+}
+
+.site-footer {
+    flex-shrink: 0;
+    background-color: var(--text-dark);
+    color: var(--bg-surface);
+    padding: 25px 5%;
+    text-align: center;
+    border-top: 4px solid var(--brand-orange);
+    margin-top: auto; /* Pushes to bottom */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright-text {
+    font-size: 1rem;
+    color: #aaaaaa;
+    letter-spacing: 0.5px;
+}

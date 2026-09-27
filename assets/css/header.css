@@ -1,0 +1,81 @@
+.main-header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: var(--bg-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    gap: 10px;
+}
+
+.brand-logo img {
+    height: 35px;
+    width: auto;
+}
+
+.primary-navigation {
+    display: flex;
+    gap: 25px;
+}
+
+.primary-navigation a {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.primary-navigation a:hover {
+    color: var(--brand-pink);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.alert-bell-wrapper {
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.alert-bell-wrapper:hover {
+    color: var(--brand-pink);
+    transform: scale(1.1);
+}
+
+.badge-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: var(--brand-pink);
+    color: var(--bg-surface);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 50px;
+    border: 2px solid var(--bg-surface);
+}
+
+@media (max-width: 768px) {
+    .primary-navigation {
+        display: none; /* Can be toggled via JS later if needed */
+    }
+}

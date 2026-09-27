@@ -1,0 +1,97 @@
+:root {
+    --brand-orange: #f8b450;
+    --brand-pink: #e8758e;
+    --text-dark: #222222;
+    --text-light: #666666;
+    --bg-white: #ffffff;
+    --shadow-soft: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+body {
+    background-color: #f4f7f6;
+}
+
+.staff-profile-section {
+    padding: 120px 5% 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.profile-header-card {
+    background: var(--bg-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    border-top: 5px solid var(--brand-orange);
+    margin-bottom: 40px;
+}
+
+.profile-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--brand-orange);
+    margin-bottom: 20px;
+}
+
+.staff-name {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.staff-stats li {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+/* Assigned Children Roster */
+.dependents-roster {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.dependent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dependent-card {
+    background: #fdfdfd;
+    border: 1px solid #eeeeee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.dependent-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--brand-orange);
+}
+
+.btn-primary {
+    background: var(--brand-pink);
+    color: var(--bg-white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--brand-orange);
+}
